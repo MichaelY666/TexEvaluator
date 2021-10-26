@@ -1,0 +1,104 @@
+[debug] [2021-10-26T02:30:24.672Z] ----------------------------------------------------------------------
+[debug] [2021-10-26T02:30:24.677Z] Command:       /usr/local/Cellar/node/16.5.0/bin/node /Users/michael/Desktop/tex-evaluator/node_modules/.bin/firebase init
+[debug] [2021-10-26T02:30:24.678Z] CLI Version:   9.21.0
+[debug] [2021-10-26T02:30:24.678Z] Platform:      darwin
+[debug] [2021-10-26T02:30:24.678Z] Node Version:  v16.5.0
+[debug] [2021-10-26T02:30:24.679Z] Time:          Mon Oct 25 2021 19:30:24 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-10-26T02:30:24.680Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-26T02:30:24.687Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-26T02:30:24.687Z] > authorizing via signed-in user (mzxyang@ucdavis.edu)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/michael/Desktop/tex-evaluator
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-10-26T02:32:53.288Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-26T02:32:53.289Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-26T02:32:53.427Z] <<< HTTP RESPONSE 200 {"date":"Tue, 26 Oct 2021 02:32:53 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-26T02:32:53.471Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"666","name":"666"}
+[debug] [2021-10-26T02:32:53.602Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 26 Oct 2021 02:32:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=76","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-26T02:32:53.603Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id must be at least 6 characters long"},{"field":"project_id","description":"project_id contains invalid characters"},{"field":"display_name","description":"project display name must be at least 4 characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2021-10-26T02:32:53.682Z] FirebaseError: HTTP Error: 400, Request contains an invalid argument.
+    at module.exports (/Users/michael/Desktop/tex-evaluator/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/Users/michael/Desktop/tex-evaluator/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/Users/michael/Desktop/tex-evaluator/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at Request.<anonymous> (/Users/michael/Desktop/tex-evaluator/node_modules/request/request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at IncomingMessage.<anonymous> (/Users/michael/Desktop/tex-evaluator/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+    at IncomingMessage.emit (node:domain:470:12)
+    at endReadableNT (node:internal/streams/readable:1331:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2021-10-26T02:33:12.990Z] ----------------------------------------------------------------------
+[debug] [2021-10-26T02:33:12.993Z] Command:       /usr/local/Cellar/node/16.5.0/bin/node /Users/michael/Desktop/tex-evaluator/node_modules/.bin/firebase init
+[debug] [2021-10-26T02:33:12.993Z] CLI Version:   9.21.0
+[debug] [2021-10-26T02:33:12.993Z] Platform:      darwin
+[debug] [2021-10-26T02:33:12.993Z] Node Version:  v16.5.0
+[debug] [2021-10-26T02:33:12.995Z] Time:          Mon Oct 25 2021 19:33:12 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-10-26T02:33:12.995Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-26T02:33:13.002Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-26T02:33:13.002Z] > authorizing via signed-in user (mzxyang@ucdavis.edu)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/michael/Desktop/tex-evaluator
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-10-26T02:34:07.083Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"TexEvaluator","name":"TexEvaluator"}
+[debug] [2021-10-26T02:34:07.326Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 26 Oct 2021 02:34:07 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=161","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-26T02:34:07.327Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2021-10-26T02:34:07.400Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at module.exports (/Users/michael/Desktop/tex-evaluator/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/Users/michael/Desktop/tex-evaluator/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/Users/michael/Desktop/tex-evaluator/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at Request.<anonymous> (/Users/michael/Desktop/tex-evaluator/node_modules/request/request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at Request.emit (node:domain:470:12)
+    at IncomingMessage.<anonymous> (/Users/michael/Desktop/tex-evaluator/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+    at IncomingMessage.emit (node:domain:470:12)
+    at endReadableNT (node:internal/streams/readable:1331:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
